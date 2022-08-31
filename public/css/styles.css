@@ -13,6 +13,10 @@ h3{
     font-size: 24px;
 }
 
+#buy{
+font-size: 16px;
+    margin: 20px;
+}
 p{
     font-size: 12px;
 }
@@ -34,8 +38,9 @@ header{
 }
 
 header div.logo,
-header .form{
+header .form, header div.container{
     width: 50%;
+    
 }
 
 header div.logo{
@@ -55,7 +60,24 @@ header nav{
 header ul li{
     list-style-type: none;
 }
+input {
+    flex: 1;
+    border: 0;
+    font-size: 15px;
+    color: #666666;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    border-width: 0px;
+    border-style:none;
+    border-color:none;
+    border-image: initial;
+}
 
+.nav-search-btn{
+    border-style:none;
+    border-color:none;
+    border-image: initial;
+}
 header ul li a{
     text-decoration: none;
     color: #000;
@@ -170,6 +192,7 @@ main section h3{
     margin: 20px 0px;
 }
 
+
 main section div.products article i{
     transition: transform 1s;
 }
@@ -224,7 +247,19 @@ footer p{
     color: #1259c3;
 }
 
-@media (max-width: 361px){
+.flexfooter{
+    display: flex;
+    justify-content: space-around;
+    padding-bottom: 40px;
+}
+
+footer div, footer p {
+    text-align: center;
+    margin: 10px;
+
+}
+
+@media (max-width: 600px){
     header nav { 
     display:none;
     }
@@ -232,7 +267,7 @@ footer p{
         display: block;
     }
 }
-@media (min-width: 361px){
+@media (min-width: 600px){
     header nav { 
         display: block;
         }
@@ -250,6 +285,11 @@ footer p{
         justify-content: space-between;
         align-items: flex-start;
     }
+
+    p#buy {
+        width: 30%;
+        text-align: center;
+      }
     
     main section div.products article{
         width: 45%;
@@ -259,9 +299,64 @@ footer p{
     .discount{
         width: 50%;
     }
+    .container {
+        width: 50%;
+        padding: 5px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        line-height: 20px;
+      }
+
+      .search-bar {
+        flex-grow: 7;
+        width: 100%;
+        display: flex;
+        align-items: center;
+        border-radius: 5px;
+        padding: 8px 10px;
+        background-color: white;
+    }
+
+      
+    div.top-header {
+        display: flex;
+        padding: 5%;
+        flex-direction: row;
+        align-content: center;
+        justify-content: space-between;
+        align-items: center;
+        flex-wrap: nowrap;
+    }
+    
+    header div.top-header p {
+        display: flex;
+        padding-bottom: 10px;
+    }
+    .navegadores{
+        display: flex;
+        justify-content: space-between;
+        padding:  15px;
+    }
+    
+    header .nav1{
+        display: flex;
+    
+        
+        
+    }
+    header .nav2{
+        display: flex;
+        
+    }
+
+    header ul li a {
+        padding: 20px;
+    }
+
 }
 
-@media (min-width: 769px){
+@media (min-width: 992px){
     div.burger-menu {
     
         display: none;
@@ -269,11 +364,25 @@ footer p{
     main section div.products article{
         width: 22%;
     }
+
+@media (min-width: 1200px) {
+    .header-login {  
+        max-width: none;
+        }
+      
+        #buy {
+          max-width: none;
+        }
+      }
 }
 
 /*
-Como instalo el lenguaje Roboto en las dependencias?
-/* position borra el camion
+Como ponerle mas espacio en el medio de los Navs No me toma el Flex End Flex start?
+Que pasa si se tiene la resolución 839x950??
+Que pasa si le agrego un porcentaje a media en funcion de otro porcentaje?
+Como hacer para que el 230.000 no esté encimado cuando se achica, bajarle el font no sirve.
+Como hacer para que mi lupa se solape con la barra de busqueda
+
 Amarillo: #EAC926;
 Azul: #03264C;
 Celeste: #1259c3;
